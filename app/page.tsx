@@ -1,87 +1,94 @@
 import React from 'react';
-import Link from 'next/link'
-import { ArrowRightIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link';
+import Header from './components/Header';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
-      <div className="relative isolate overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
-          <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-            <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl gradient-text">
-              1 long video, 10 viral clips. Create 10x faster.
-            </h1>
-            <p className="mt-6 text-lg leading-8">
-              OpusClip turns long videos into shorts, and publishes them to all social platforms in one click.
-            </p>
-            <div className="mt-10 flex items-center gap-x-6">
-              <Link
-                href="/dashboard"
-                className="button-gradient text-white"
-              >
-                Get free clips
-              </Link>
-              <Link href="/upload" className="text-sm font-semibold leading-6">
-                Upload files <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </div>
-          <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-            <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-              <img
-                src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-                alt="App screenshot"
-                width={2432}
-                height={1442}
-                className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Features Section */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary-600">Faster Processing</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need to create viral shorts
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Our platform provides all the tools you need to transform your YouTube videos into engaging shorts that capture attention.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {features.map((feature) => (
-              <div key={feature.name} className="flex flex-col">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-                  {feature.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                  <p className="flex-auto">{feature.description}</p>
-                </dd>
+      <Header />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="relative overflow-hidden pt-20 pb-16">
+          <div className="container mx-auto px-6">
+            <div className="text-center max-w-4xl mx-auto">
+              <p className="text-center mb-4 text-green-400 font-medium">#1 AI VIDEO CLIPPING TOOL</p>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                1 long video, 10 viral clips. Create 10x faster.
+              </h1>
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                OpusClip turns long videos into shorts, and publishes them to all social platforms in one click.
+              </p>
+              
+              <div className="flex justify-center space-x-4 mb-12">
+                <Link href="/dashboard" className="button-primary">
+                  Get free clips
+                </Link>
+                <Link href="/upload" className="button-secondary">
+                  Upload files
+                </Link>
               </div>
-            ))}
-          </dl>
-        </div>
-      </div>
+              
+              <div className="mt-12 flex justify-center">
+                <div className="upload-area max-w-2xl w-full">
+                  <div className="flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                    </svg>
+                    <span>Drop a video link</span>
+                  </div>
+                  <input 
+                    type="text" 
+                    placeholder="https://www.youtube.com/watch?v=..."
+                    className="input-gradient mb-4"
+                  />
+                  <div className="flex justify-center">
+                    <button className="button-primary">Get free clips</button>
+                    <span className="mx-4 self-center text-gray-400">or</span>
+                    <button className="button-secondary">Upload files</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Features Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-6">
+            <div className="max-w-2xl mx-auto mb-16">
+              <h2 className="text-2xl font-bold mb-4">Faster Processing</h2>
+              <p className="text-lg text-gray-300">
+                Everything you need to create viral shorts
+              </p>
+              <p className="mt-4 text-gray-400">
+                Our platform provides all the tools you need to transform your videos into engaging shorts that capture attention.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="card p-6">
+                <h3 className="text-lg font-semibold mb-3">AI-Powered Editing</h3>
+                <p className="text-gray-400">
+                  Our AI automatically identifies the most engaging moments from your videos and creates perfect shorts.
+                </p>
+              </div>
+              <div className="card p-6">
+                <h3 className="text-lg font-semibold mb-3">Custom Templates</h3>
+                <p className="text-gray-400">
+                  Choose from a variety of templates to match your content style and brand identity.
+                </p>
+              </div>
+              <div className="card p-6">
+                <h3 className="text-lg font-semibold mb-3">Analytics Dashboard</h3>
+                <p className="text-gray-400">
+                  Track your shorts performance and get insights to optimize your content strategy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-  )
-}
-
-const features = [
-  {
-    name: 'AI-Powered Editing',
-    description: 'Our AI automatically identifies the most engaging moments from your videos and creates perfect shorts.',
-  },
-  {
-    name: 'Custom Templates',
-    description: 'Choose from a variety of templates to match your content style and brand identity.',
-  },
-  {
-    name: 'Analytics Dashboard',
-    description: 'Track your shorts performance and get insights to optimize your content strategy.',
-  },
-] 
+  );
+} 

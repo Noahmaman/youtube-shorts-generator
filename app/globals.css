@@ -9,9 +9,9 @@
 }
 
 body {
-  background-color: #111111;
+  background-color: #0A0A0A;
   color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 .gradient-text {
@@ -21,39 +21,100 @@ body {
   background-clip: text;
 }
 
+.gradient-badge {
+  background: linear-gradient(90deg, rgba(0, 255, 148, 0.2) 0%, rgba(0, 184, 255, 0.2) 100%);
+  border: 1px solid rgba(0, 255, 148, 0.3);
+  color: #00FF94;
+  font-weight: 600;
+}
+
+.header {
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 0;
+}
+
 .input-gradient {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
-  padding: 0.5rem;
-  border-radius: 0.375rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  color: white;
+  transition: all 0.3s ease;
 }
 
-.button-gradient {
+.input-gradient:focus {
+  border-color: #00FF94;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 255, 148, 0.2);
+}
+
+.button-primary {
   background: linear-gradient(90deg, #00FF94 0%, #00B8FF 100%);
   transition: all 0.3s ease;
   padding: 0.75rem 1.5rem;
-  border-radius: 0.375rem;
-  font-weight: bold;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
 }
 
-.button-gradient:hover {
+.button-primary:hover {
   opacity: 0.9;
   transform: translateY(-1px);
 }
 
-.upload-area {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px dashed rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+.button-secondary {
+  background: rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  padding: 2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.upload-area {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  padding: 2.5rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .upload-area:hover {
   border-color: #00FF94;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 @layer base {
