@@ -9,7 +9,7 @@ export default function Home() {
       <div className="relative isolate overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
           <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-            <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl">
+            <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl gradient-text">
               1 long video, 10 viral clips. Create 10x faster.
             </h1>
             <p className="mt-6 text-lg leading-8">
@@ -18,7 +18,7 @@ export default function Home() {
             <div className="mt-10 flex items-center gap-x-6">
               <Link
                 href="/dashboard"
-                className="rounded-md bg-primary-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+                className="button-gradient text-white"
               >
                 Get free clips
               </Link>

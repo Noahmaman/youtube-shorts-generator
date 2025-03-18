@@ -11,6 +11,7 @@
 body {
   background-color: #111111;
   color: #ffffff;
+  font-family: 'Inter', sans-serif;
 }
 
 .gradient-text {
@@ -24,11 +25,16 @@ body {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
+  padding: 0.5rem;
+  border-radius: 0.375rem;
 }
 
 .button-gradient {
   background: linear-gradient(90deg, #00FF94 0%, #00B8FF 100%);
   transition: all 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: bold;
 }
 
 .button-gradient:hover {
@@ -41,6 +47,8 @@ body {
   border: 2px dashed rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   transition: all 0.3s ease;
+  padding: 2rem;
+  text-align: center;
 }
 
 .upload-area:hover {
