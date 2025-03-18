@@ -2,11 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-  }
+:root {
+  --background: 0 0% 7%;
+  --foreground: 0 0% 100%;
+  --primary: 152 76% 53%;
+}
+
+body {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00FF94 0%, #00B8FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.input-gradient {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.button-gradient {
+  background: linear-gradient(90deg, #00FF94 0%, #00B8FF 100%);
+  transition: all 0.3s ease;
+}
+
+.button-gradient:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.upload-area {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  border-color: #00FF94;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 @layer base {
